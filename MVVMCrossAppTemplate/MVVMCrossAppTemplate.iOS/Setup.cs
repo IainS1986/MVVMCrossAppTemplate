@@ -1,14 +1,15 @@
 ﻿using MVVMCrossAppTemplate.Core;
 using MvvmCross.Platforms.Ios.Core;
 using UIKit;
+using MvvmCross.IoC;
 
 namespace MVVMCrossAppTemplate.iOS
 {
     public class Setup : MvxIosSetup<App>
     {
-        protected override void InitializeIoC()
+        protected override IMvxIoCProvider InitializeIoC()
         {
-            base.InitializeIoC();
+            return base.InitializeIoC();
         }
     }
 }
